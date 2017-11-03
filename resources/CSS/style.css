@@ -40,6 +40,8 @@ a {
   color: DarkGrey;
 }
 
+/* Banner Section*/
+
 .banner {
   padding-top: 64px;
   background-color: LightGrey;
@@ -72,20 +74,85 @@ a {
   border-radius: 8px;
 }
 
+/*Info Section*/
 .information {
   display: flex;
+  justify-content: space-around;
+  border: 1px solid black;
+}
+
+.info-main {
+  margin: 2rem 1.5rem;
+  border: 1px solid black;
+  display: inline-flex;
+  justify-content: flex-start;
   flex-flow: column;
-  background-color: Green;
 }
 
-.information img {
-  width: 60%;
-  padding: 24px 32px;
+.info-main img {
+  width: 100%;
+  height: auto;
 }
 
-
+/*Column Section*/
 .info-column {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid black;
+}
 
+.column img {
+  width: 35%;
+  height: inherit;
+}
+
+.column {
+  display: inline-flex;
+  flex-flow: row;
+  align-items: center;
+  padding: .05rem;
+  border: 1px solid black;
+}
+
+.column-text {
+  margin: 1rem;
+}
+
+/*Start Learning Section */
+
+.start-learning {
+  border: 1px solid black;
+  padding: 3rem 0rem 3rem 1rem;
+}
+
+.start-main {
+  display: block;
+  width: 100%
+  padding: 2rem 2rem;
+  text-align: center;
+}
+
+.block-container {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  flex-flow: wrap;
+  margin: 1rem 1rem;
+
+  border: 1px solid black;
+}
+
+.start-blocks {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+.block-text {
+  padding: 1rem 1rem;
+}
+
+.block-text p {
+  padding: .5rem .5rem;
 }
