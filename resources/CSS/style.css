@@ -1,3 +1,5 @@
+/* Navigation */
+
 .navbar {
   font-family: Arial;
   font-size: 14px;
@@ -29,7 +31,6 @@
 
 .nav span {
   display: flex;
-  display: inline-block;
   padding: 20px 20px;
   width: 100%;
   height: 80%;
@@ -40,16 +41,37 @@ a {
   color: DarkGrey;
 }
 
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  nav .icon {
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav .text {
+    display: none;
+  }
+  .logo span {
+    display: none;
+  }
+}
+
+@media only screen and (min-width : 481px) {
+  nav .icon {
+    display: none;
+  }
+}
+
 /* Banner Section*/
 
 .banner {
-  padding-top: 64px;
+  display: flex;
+  padding-top: 4rem;
   background-color: LightGrey;
   height: 600px;
   text-align: left;
 }
 .banner img {
-  display: inline;
+  display: inline-flex;
   width: 60%;
   padding: 24px 32px;
   flex-grow: 1;
@@ -64,7 +86,7 @@ a {
 
 .banner #button {
   display: inline-block;
-  padding: 8px 32px;
+  padding: .5rem 2rem;
   background-color: DarkGrey;
   font-size: 24px;
   text-align: center;
@@ -72,6 +94,30 @@ a {
   border: none;
   color: white;
   border-radius: 8px;
+}
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  .banner {
+    display: block;
+  }
+
+  .banner img {
+    display: block;
+    width: 100%;
+    padding: 0rem 0rem;
+    margin-bottom: 2rem;
+  }
+  .bannercontent {
+    display: block;
+    padding: 1rem 2rem;
+
+  }
+  .banner #button {
+    display: block;
+    align-items: center;
+    padding: .5rem 2.5rem;
+    margin: 1rem 1.5rem 1rem 2rem;
+  }
 }
 
 /*Info Section*/
@@ -92,6 +138,17 @@ a {
 .info-main img {
   width: 100%;
   height: auto;
+}
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+
+  .information {
+    display: block;
+  }
+
+  .info-main {
+    display: none;
+  }
 }
 
 /*Column Section*/
@@ -120,6 +177,22 @@ a {
   margin: 1rem;
 }
 
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  .info-column {
+    display: block;
+  }
+
+  .column img {
+    display: block;
+    width: 100%;
+    padding: 1rem 1rem;
+  }
+
+  .column-text{
+    display: block;
+  }
+}
+
 /*Start Learning Section */
 
 .start-learning {
@@ -133,6 +206,14 @@ a {
   padding: 2rem 2rem;
   text-align: center;
 }
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  .start-learning {
+    padding: 1rem 2rem 1rem 1rem;
+  }
+}
+
+/* Grid Section*/
 
 .block-container {
   display: flex;
@@ -164,6 +245,28 @@ a {
   padding: .5rem .5rem;
 }
 
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  .block-container {
+    display: block;
+    padding-left: 0rem;
+    padding-right: 2rem;
+  }
+
+  .start-block img {
+    display: none;
+  }
+
+  .start-block {
+    display: block;
+    margin: .5rem 1rem;
+    width: 100%;
+  }
+
+  .start-block p {
+    display: none;
+  }
+}
+
 /* Thesis Exhibit Section*/
 
 .thesis-exhibit {
@@ -178,26 +281,63 @@ a {
   text-align: center;
 }
 
-.thesis-content {
+.thesis-content{
   margin: 2rem 1.5rem;
   border: 1px solid black;
   display: inline-flex;
   justify-content: flex-start;
+  flex-flow: row;
+}
+
+.thesis-main {
+  border: 1px solid black;
+  display: inline-flex;
+  justify-content: flex-start;
   flex-flow: column;
+  width: 60%;
+  margin-right: 1.5rem;
 }
 
 .thesis-content video {
-  width: 60%;
+  width: 100%;
   height: auto;
+  position: relative;
 }
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  .thesis-exhibit {
+    padding: 0rem 0rem;
+  }
+  .thesis-exhibit .title {
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+  }
+
+  .thesis-main {
+    margin: 0rem 0rem;
+    width: 100%;
+  }
+
+  .thesis-content {
+    margin: 0rem 0rem;
+  }
+
+  .thesis-main h3 {
+    display: none;
+  }
+
+  .thesis-main p {
+    display: none;
+  }
+}
+
 
 /*Column Section*/
 .thesis-column {
   display: flex;
   flex-flow: column;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
   border: 1px solid black;
+  width: 40%;
 }
 
 .column img {
@@ -215,4 +355,40 @@ a {
 
 .column-text {
   margin: 1rem;
+}
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  .thesis-column {
+    display: none;
+  }
+}
+
+/*Footer*/
+
+.footer {
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  z-index: 1;
+  background-color: white;
+  width: 98%;
+  height: 64px;
+  text-decoration: none;
+  font-color: Grey;
+}
+
+.footer span {
+  display: flex;
+  display: inline-block;
+  padding: 20px 20px;
+  width: 100%;
+  height: 80%;
+  margin-right: 16px;
+}
+
+.footer-links {
+  float: right;
 }
